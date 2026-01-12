@@ -190,7 +190,14 @@ function search(){
     log("実験に使ったであろう汚い液体が床に飛び散っている...");
     setTimeout(endgame, 3000);
 }
-   
+    else if(here==="EMPTY"){
+        log("何も見つからなかったせいで萎えた...");
+    setTimeout(gameend, 2000);
+}
+    else if(here==="通路"){
+        log("ここを通るのはめんどくさすぎるのに、通らなければいけないなんて...");
+        setTimeout(Q, 3000);
+}
 
 /*log("何故かとても気持ち悪くなってきた...");
     setTimeout(log("もしかしたらあの汚い通路のせいかもしれない..."), 3000);
@@ -211,8 +218,7 @@ else if(here==="冷凍庫"){
   keypad.classList.remove("hidden");
   log("キーパッドが現れた");
  }
- else log("何も見つからなかったせいで萎えた...");
-    setTimeout(gameend, 2000);
+ else log("何も見つからなかった...");
  updateUI();
 }
 
@@ -280,7 +286,11 @@ function gameend(){
     window.alert("あなたはやる気を無くした。");
     setTimeout(resetgame, 20);
 }
-    
+
+function Q(){
+    log("もう脱出する気力がなくなってしまった...");
+    setTimeout(gameend, 3000);
+}
 
     
 
