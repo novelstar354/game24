@@ -208,6 +208,7 @@ function search(){
 */
     else if(here==="排水溝"){
     log("とても汚い水が流れている...");
+    setTimeout(a, 3000);
 }
 else if(here==="冷凍庫"){
     log("外にいるだけでもとても寒い...ここに入ったら凍りついてしまいそうだ");
@@ -291,7 +292,10 @@ function Q(){
     log("もう脱出する気力がなくなってしまった...");
     setTimeout(gameend, 3000);
 }
-
+function a(){
+    log("だんだん気持ち悪くなってきた");
+    setTimeout(end2, 2000);
+}
     
 
 
